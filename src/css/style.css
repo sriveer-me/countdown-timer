@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 2rem;
+  color: white; }
+
+.flip-clock__element {
+  width: 10rem;
+  height: 20rem;
+  position: relative;
+  font-size: 15rem;
+  color: #fb6087; }
+  .flip-clock__elementTop, .flip-clock__elementBottom {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    overflow: hidden; }
+  .flip-clock__elementTop {
+    top: 0;
+    left: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #343650; }
+  .flip-clock__elementBottom {
+    bottom: 0;
+    left: 0;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: #8486a9; }

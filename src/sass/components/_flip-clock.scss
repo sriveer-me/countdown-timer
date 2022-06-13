@@ -1,7 +1,7 @@
 .flip-clock{
     &__element{
-        width: 10rem;
-        height: 20rem;
+        width: 24.6rem;
+        height: 23.8rem;
 
         position: relative;
         font-size: 15rem;
@@ -10,11 +10,13 @@
         &Top,
         &Bottom{
            position: absolute;
-           width: 10rem;
-           height: 10rem;
+           height: calc(23.8rem / 2);
 
            display: flex;
            overflow: hidden;
+           letter-spacing: -1.0rem;
+           padding: 2rem;
+           border-radius: 7px;
         }
 
         &Top{
@@ -24,6 +26,8 @@
             align-items: flex-start;
             justify-content: flex-start;
             background-color: $color-black-3;
+
+            border-bottom: 1px solid $color-black-3;
         }
 
         &Bottom{
@@ -33,6 +37,14 @@
             align-items: flex-end;
             justify-content: flex-start;
             background-color: $color-black-4;
+        }
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: red;
         }
     }
 }

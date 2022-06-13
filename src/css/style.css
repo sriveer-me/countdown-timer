@@ -21,6 +21,7 @@ body {
   color: #fb6087; }
   .flip-clock__elementTop, .flip-clock__elementBottom {
     position: absolute;
+    width: 24.6rem;
     height: calc(23.8rem / 2);
     display: flex;
     overflow: hidden;
@@ -32,17 +33,38 @@ body {
     left: 0;
     align-items: flex-start;
     justify-content: flex-start;
-    background-color: #343650;
-    border-bottom: 1px solid #343650; }
+    background-color: #343650; }
   .flip-clock__elementBottom {
     bottom: 0;
     left: 0;
     align-items: flex-end;
     justify-content: flex-start;
-    background-color: #8486a9; }
+    background-color: #8486a9;
+    -webkit-box-shadow: 0px 35px 20px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 35px 20px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 35px 20px 1px rgba(0, 0, 0, 0.75);
+    color: #fc7999; }
+  .flip-clock__element::after {
+    position: absolute;
+    content: '';
+    width: 2.0rem;
+    height: 2.5rem;
+    background-color: #191a24;
+    top: 45%;
+    left: 0;
+    border-radius: 0 300px 300px 0; }
   .flip-clock__element::before {
     position: absolute;
     content: '';
-    width: 10px;
-    height: 10px;
-    background-color: red; }
+    width: 2.0rem;
+    height: 2.5rem;
+    background-color: #191a24;
+    top: 45%;
+    right: 0;
+    z-index: 99;
+    border-radius: 300px 0 0 300px; }
+
+main {
+  background-color: #1e1f29;
+  height: 100vh;
+  width: 100vw; }

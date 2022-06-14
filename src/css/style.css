@@ -64,18 +64,19 @@ body {
       .flip-clock__elementTopFlap.hidden {
         display: none; }
       .flip-clock__elementTopFlap.animate {
-        animation: rise-up ease-in 0.75s;
+        animation: rise-up ease-in 0.5s;
         animation-fill-mode: forwards;
         transform-origin: bottom; }
     .flip-clock__elementBottomFlap {
-      z-index: 97; }
+      z-index: 97;
+      transform: rotateX(90deg);
+      transform-origin: top; }
       .flip-clock__elementBottomFlap.hidden {
         display: none; }
       .flip-clock__elementBottomFlap.animate {
-        animation: fall-down ease-out 0.75s;
-        animation-delay: 0.75s;
-        transform-origin: top;
-        animation-fill-mode: backwards; }
+        animation: fall-down ease-out 0.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards; }
     .flip-clock__element::after {
       position: absolute;
       content: '';

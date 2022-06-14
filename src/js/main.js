@@ -64,7 +64,7 @@ function setText(el,newText)
 
         topFlap.classList.remove('animate')
         bottomFlap.classList.remove('animate')
-    },1500); //assuming that the css animation takes 0.75 seconds to complete
+    },1000); //assuming that the css animation takes 0.75 seconds to complete
 }
 
 setText(days,15);

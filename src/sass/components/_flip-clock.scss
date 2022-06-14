@@ -61,7 +61,7 @@
             }
 
             &.animate{
-                animation: rise-up ease-in 0.75s;
+                animation: rise-up ease-in 0.5s;
                 animation-fill-mode: forwards;
                 transform-origin: bottom;
             }
@@ -70,16 +70,17 @@
         &BottomFlap{
             // background-color: blue;
             z-index: 97;
+            transform: rotateX(90deg);
+            transform-origin: top;
 
             &.hidden{
                 display: none;
             }
 
             &.animate{
-                animation: fall-down ease-out 0.75s;
-                animation-delay: 0.75s;
-                transform-origin: top;
-                animation-fill-mode: backwards;
+                animation: fall-down ease-out 0.5s;
+                animation-delay: 0.5s;
+                animation-fill-mode: forwards;
             }
         }
 

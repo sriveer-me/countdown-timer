@@ -10,8 +10,12 @@
         font-size: 15rem;
         color: $color-red;
 
+        perspective: 100000px;
+
         &Top,
-        &Bottom{
+        &TopFlap,
+        &Bottom,
+        &BottomFlap{
            position: absolute;
            width: 24.6rem;
            height: calc(23.8rem / 2);
@@ -24,17 +28,17 @@
            border-radius: 7px;
         }
 
-        &Top{
+        &Top,
+        &TopFlap{
             top: 0;
             left: 0;
 
             align-items: flex-start;
             background-color: $color-black-3;
-
-            
         }
 
-        &Bottom{
+        &Bottom,
+        &BottomFlap{
             bottom: 0;
             left: 0;
 
@@ -46,6 +50,22 @@
             box-shadow: 0px 35px 20px 1px rgba(0,0,0,0.75);
 
             color: lighten($color-red, 5%);
+        }
+
+        &TopFlap{
+            animation: rise-up ease-in 0.75s;
+            transform-origin: bottom;
+            z-index: 97;
+        }
+
+        &BottomFlap{
+            animation: fall-down ease-out 0.75s;
+            animation-delay: 0.75s;
+            transform-origin: top;
+            animation-fill-mode: both;
+
+            background-color: rebeccapurple;
+            z-index: 97;
         }
 
         &::after{
@@ -107,4 +127,6 @@
             background-image: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.1));
         }
     }
+
+
 }

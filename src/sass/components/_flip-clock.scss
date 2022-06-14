@@ -53,19 +53,34 @@
         }
 
         &TopFlap{
-            animation: rise-up ease-in 0.75s;
-            transform-origin: bottom;
+            // background-color: red;
             z-index: 97;
+
+            &.hidden{
+                display: none;
+            }
+
+            &.animate{
+                animation: rise-up ease-in 0.75s;
+                animation-fill-mode: forwards;
+                transform-origin: bottom;
+            }
         }
 
         &BottomFlap{
-            animation: fall-down ease-out 0.75s;
-            animation-delay: 0.75s;
-            transform-origin: top;
-            animation-fill-mode: both;
-
-            background-color: rebeccapurple;
+            // background-color: blue;
             z-index: 97;
+
+            &.hidden{
+                display: none;
+            }
+
+            &.animate{
+                animation: fall-down ease-out 0.75s;
+                animation-delay: 0.75s;
+                transform-origin: top;
+                animation-fill-mode: backwards;
+            }
         }
 
         &::after{

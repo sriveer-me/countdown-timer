@@ -60,16 +60,22 @@ body {
       box-shadow: 0px 35px 20px 1px rgba(0, 0, 0, 0.75);
       color: #fc7999; }
     .flip-clock__elementTopFlap {
-      animation: rise-up ease-in 0.75s;
-      transform-origin: bottom;
       z-index: 97; }
+      .flip-clock__elementTopFlap.hidden {
+        display: none; }
+      .flip-clock__elementTopFlap.animate {
+        animation: rise-up ease-in 0.75s;
+        animation-fill-mode: forwards;
+        transform-origin: bottom; }
     .flip-clock__elementBottomFlap {
-      animation: fall-down ease-out 0.75s;
-      animation-delay: 0.75s;
-      transform-origin: top;
-      animation-fill-mode: both;
-      background-color: rebeccapurple;
       z-index: 97; }
+      .flip-clock__elementBottomFlap.hidden {
+        display: none; }
+      .flip-clock__elementBottomFlap.animate {
+        animation: fall-down ease-out 0.75s;
+        animation-delay: 0.75s;
+        transform-origin: top;
+        animation-fill-mode: backwards; }
     .flip-clock__element::after {
       position: absolute;
       content: '';

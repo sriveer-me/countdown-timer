@@ -61,7 +61,7 @@
             }
 
             &.animate{
-                animation: rise-up ease-in 0.5s;
+                animation: rise-up ease-in 0.25s;
                 animation-fill-mode: forwards;
                 transform-origin: bottom;
             }
@@ -78,8 +78,8 @@
             }
 
             &.animate{
-                animation: fall-down ease-out 0.5s;
-                animation-delay: 0.5s;
+                animation: fall-down ease-out 0.25s;
+                animation-delay: 0.25s;
                 animation-fill-mode: forwards;
             }
         }
@@ -143,6 +143,4 @@
             background-image: linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.1));
         }
     }
-
-
 }

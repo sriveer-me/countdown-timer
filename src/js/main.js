@@ -1,6 +1,9 @@
 import {getTimeRemaining,refreshEndTime} from './countdown.js';
 
-let days = document.getElementById('days');
+let days    = document.getElementById('days');
+let hours   = document.getElementById('hours');
+let minutes = document.getElementById('minutes');
+let seconds = document.getElementById('seconds');
 
 function checkEquality(elements)
 {
@@ -36,7 +39,10 @@ function setText(el,newText)
     }
 
     let oldValue = topElement.innerText;
-    let newValue = newText;
+    let newValue = `${newText}`;
+
+    if(oldValue === newValue)
+        return;
 
     topElement.innerText = `${newValue}`;
     topFlap.innerText = `${oldValue}`;
@@ -65,12 +71,19 @@ function setText(el,newText)
 
         topFlap.classList.remove('animate');
         bottomFlap.classList.remove('animate');
-    },1000); //assuming that the css animation takes 0.75 seconds to complete
+    },500); //assuming that the css animation takes 0.5s seconds to complete
 }
 
-setText(days,15);
+// setText(days,15);
 
 setInterval(function(){
     let timeRemaing = getTimeRemaining();
+
+
+    setText(days,timeRemaing.days);
+    setText(hours,timeRemaing.hours);
+    setText(minutes,timeRemaing.minutes);
+    setText(seconds,timeRemaing.seconds);
+
     console.log(`Days : ${timeRemaing.days} Hours : ${timeRemaing.hours} Minutes : ${timeRemaing.minutes} Seconds : ${timeRemaing.seconds}`);
 },1000);

@@ -64,7 +64,7 @@ body {
       .flip-clock__elementTopFlap.hidden {
         display: none; }
       .flip-clock__elementTopFlap.animate {
-        animation: rise-up ease-in 0.5s;
+        animation: rise-up ease-in 0.25s;
         animation-fill-mode: forwards;
         transform-origin: bottom; }
     .flip-clock__elementBottomFlap {
@@ -74,8 +74,8 @@ body {
       .flip-clock__elementBottomFlap.hidden {
         display: none; }
       .flip-clock__elementBottomFlap.animate {
-        animation: fall-down ease-out 0.5s;
-        animation-delay: 0.5s;
+        animation: fall-down ease-out 0.25s;
+        animation-delay: 0.25s;
         animation-fill-mode: forwards; }
     .flip-clock__element::after {
       position: absolute;

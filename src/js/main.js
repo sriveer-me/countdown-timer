@@ -1,3 +1,5 @@
+import {getTimeRemaining,refreshEndTime} from './countdown.js';
+
 let days = document.getElementById('days');
 
 function checkEquality(elements)
@@ -10,7 +12,6 @@ function checkEquality(elements)
                 return false;
         }
     }
-
     return true;
 }
 
@@ -27,7 +28,7 @@ function setText(el,newText)
         `
         topElement.innerText : ${topElement.innerText} 
         bottomElement.innerText : ${bottomElement.innerText} 
-        topFlap.innerText : ${topFlap.innerText} 
+        topFlap.innerText : ${topFlap.innerText}
         bottomFlap.innerText : ${bottomFlap.innerText}
         `
         );
@@ -62,9 +63,14 @@ function setText(el,newText)
         topFlap.innerText = newValue;
         bottomElement.innerText = newValue;
 
-        topFlap.classList.remove('animate')
-        bottomFlap.classList.remove('animate')
+        topFlap.classList.remove('animate');
+        bottomFlap.classList.remove('animate');
     },1000); //assuming that the css animation takes 0.75 seconds to complete
 }
 
 setText(days,15);
+
+setInterval(function(){
+    let timeRemaing = getTimeRemaining();
+    console.log(`Days : ${timeRemaing.days} Hours : ${timeRemaing.hours} Minutes : ${timeRemaing.minutes} Seconds : ${timeRemaing.seconds}`);
+},1000);

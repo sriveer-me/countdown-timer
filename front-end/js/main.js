@@ -1,4 +1,4 @@
-import {getTimeRemaining,refreshEndTime} from './countdown.js';
+import {getTimeRemaining,setEndTime} from './countdown.js';
 
 let days    = document.getElementById('days');
 let hours   = document.getElementById('hours');
@@ -76,14 +76,26 @@ function setText(el,newText)
 
 // setText(days,15);
 
-setInterval(function(){
-    let timeRemaing = getTimeRemaining();
+axios.get('/timeRemaining').then(
+    function(res){
+        let timeRemaing = res.data;
+        setEndTime(timeRemaing.total);
+        
+        setInterval(function(){
+            timeRemaing = getTimeRemaining();
+        
+            setText(days,timeRemaing.days);
+            setText(hours,timeRemaing.hours);
+            setText(minutes,timeRemaing.minutes);
+            setText(seconds,timeRemaing.seconds);
+        
+            console.log(`Days : ${timeRemaing.days} Hours : ${timeRemaing.hours} Minutes : ${timeRemaing.minutes} Seconds : ${timeRemaing.seconds}`);
+        },1000);
+    },
+    function(err){
+        console.log(err);
+    }
+);
 
 
-    setText(days,timeRemaing.days);
-    setText(hours,timeRemaing.hours);
-    setText(minutes,timeRemaing.minutes);
-    setText(seconds,timeRemaing.seconds);
 
-    console.log(`Days : ${timeRemaing.days} Hours : ${timeRemaing.hours} Minutes : ${timeRemaing.minutes} Seconds : ${timeRemaing.seconds}`);
-},1000);

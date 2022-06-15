@@ -1,6 +1,6 @@
 let endTime = null;
 
-export function getTimeRemaining()
+module.exports = function getTimeRemaining()
 {
   if(endTime === null)
     refreshEndTime();
@@ -21,9 +21,9 @@ export function getTimeRemaining()
     minutes,
     seconds
   };
-}
+};
 
-export function refreshEndTime()
+function refreshEndTime()
 {
     endTime = new Date().setDate(new Date().getDate() + 14);
 }

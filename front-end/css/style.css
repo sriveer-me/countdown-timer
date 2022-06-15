@@ -14,7 +14,7 @@ body {
   color: white; }
 
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 1.5rem;
   color: white; }
@@ -50,35 +50,37 @@ h2 {
   text-align: center; }
 
 .flip-clock {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   margin: 4rem; }
   .flip-clock__element {
-    width: 24.6rem;
-    height: 23.8rem;
+    width: 16.6rem;
+    height: 13.8rem;
     position: relative;
-    font-size: 15rem;
+    font-size: 7.5rem;
     color: #fb6087;
     perspective: 100000px; }
     .flip-clock__elementTop, .flip-clock__elementTopFlap, .flip-clock__elementBottom, .flip-clock__elementBottomFlap {
       position: absolute;
-      width: 24.6rem;
-      height: calc(23.8rem / 2);
+      width: 16.6rem;
+      height: calc(13.8rem / 2);
       display: flex;
       justify-content: center;
       overflow: hidden;
-      letter-spacing: -1.0rem;
+      letter-spacing: -0.2rem;
       padding: 2rem;
       border-radius: 7px; }
     .flip-clock__elementTop, .flip-clock__elementTopFlap {
       top: 0;
       left: 0;
       align-items: flex-start;
-      background-color: #343650; }
+      background-color: #242638; }
     .flip-clock__elementBottom, .flip-clock__elementBottomFlap {
       bottom: 0;
       left: 0;
       align-items: flex-end;
-      background-color: #8486a9;
+      background-color: #343650;
       -webkit-box-shadow: 0px 35px 20px 1px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 35px 20px 1px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 35px 20px 1px rgba(0, 0, 0, 0.75);

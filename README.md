@@ -2,9 +2,12 @@
 
 This is a solution to the [Launch countdown timer challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/launch-countdown-timer-N0XkGfyz-). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+## Live Site URL: [https://countdown-app-timer.herokuapp.com/](https://countdown-app-timer.herokuapp.com/) (heroku may take around 30 seconds to start up)
+
 ## Table of contents
 
 - [Frontend Mentor - Launch countdown timer solution](#frontend-mentor---launch-countdown-timer-solution)
+  - [Live Site URL: https://countdown-app-timer.herokuapp.com/ (heroku may take around 30 seconds to start up)](#live-site-url-httpscountdown-app-timerherokuappcom-heroku-may-take-around-30-seconds-to-start-up)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
@@ -31,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/veeru-neerukonda/countdown-timer.git](https://github.com/veeru-neerukonda/countdown-timer.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://countdown-app-timer.herokuapp.com/](https://countdown-app-timer.herokuapp.com/) (heroku may take around 30 seconds to start up)
 
 ## My process
 

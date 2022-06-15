@@ -40,6 +40,9 @@ h2 {
 .u-margin-top-big {
   margin-top: 5rem; }
 
+.u-margin-bottom-big {
+  margin-bottom: 5rem; }
+
 .u-margin-top-large {
   margin-top: 10rem; }
 
@@ -165,3 +168,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start; }
+
+.icon-box {
+  display: flex;
+  column-gap: 5rem; }
+  .icon-box a:link,
+  .icon-box a:visited {
+    fill: #8385A9;
+    transition: all 0.5s;
+    text-decoration: none; }
+  .icon-box a:hover {
+    fill: #fb6087; }

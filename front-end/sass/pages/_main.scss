@@ -21,3 +21,19 @@ main{
     justify-content: center;
     align-items: flex-start;
 }
+
+.icon-box{
+    display: flex;
+    column-gap: 5rem;
+
+    a:link,
+    a:visited{
+        fill: #8385A9;
+        transition: all 0.5s;
+        text-decoration: none;
+    }
+
+    a:hover{
+        fill: $color-red;
+    }
+}

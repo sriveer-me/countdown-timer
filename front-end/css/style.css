@@ -155,7 +155,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/pattern-hills.svg"), linear-gradient(to bottom, #191a24, #1e1f29);
+  background-image: url("../img/pattern-hills.svg"), url("../img/bg-stars.svg"), linear-gradient(to bottom, #191a24, #1e1f29, #2F2439);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain; }

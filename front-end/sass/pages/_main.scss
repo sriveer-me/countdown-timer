@@ -8,7 +8,7 @@ main{
     justify-content: center;
     align-items: center;
 
-    background-image: url('../img/pattern-hills.svg'), linear-gradient(to bottom, $color-black-1, $color-black-2);
+    background-image: url('../img/pattern-hills.svg'), url('../img/bg-stars.svg'), linear-gradient(to bottom, $color-black-1, $color-black-2, #2F2439);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;

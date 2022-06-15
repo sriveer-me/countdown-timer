@@ -2,7 +2,7 @@ const express = require('express');
 const getTimeRemaining = require('./countdown.js');
 
 const app = express();
-const port = 3000 || process.env.port;
+const port = process.env.PORT || 3000;
 
 app.use(express.static('front-end'));
 

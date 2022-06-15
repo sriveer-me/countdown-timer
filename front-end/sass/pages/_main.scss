@@ -1,5 +1,5 @@
 main{
-    background-color: $color-black-2;
+    // background-color: $color-black-2;
     height: 100vh;
     width: 100vw;
 
@@ -7,6 +7,11 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-image: url('../img/pattern-hills.svg'), linear-gradient(to bottom, $color-black-1, $color-black-2);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 }
 
 .flip-clock-row{

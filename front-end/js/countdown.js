@@ -30,8 +30,5 @@ function refreshEndTime()
 
 export function setEndTime(timeRemaing)
 {
-    let test = new Date().getTime() + timeRemaing;
-    // console.log(timeRemaing);
     endTime = new Date().setTime(new Date().getTime() + timeRemaing);
-    console.log(endTime);
 }

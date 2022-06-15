@@ -74,8 +74,6 @@ function setText(el,newText)
     },500); //assuming that the css animation takes 0.5s seconds to complete
 }
 
-// setText(days,15);
-
 axios.get('/timeRemaining').then(
     function(res){
         let timeRemaing = res.data;
@@ -96,6 +94,3 @@ axios.get('/timeRemaining').then(
         console.log(err);
     }
 );
-
-
-
